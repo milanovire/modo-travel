@@ -1,0 +1,55 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--ease), color var(--ease), transform var(--ease);
+}
+
+.root:hover {
+  background: var(--color-cta);
+  color: var(--color-on-cta);
+}
+
+.root:active {
+  transform: translateY(1px);
+}
+
+.chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.down .chevron {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.up .chevron {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.fixed {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 40;
+}
+
+@media (max-width: 760px) {
+  .fixed {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .root {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,23 @@
+.root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.home {
+  background:
+    radial-gradient(ellipse 80% 48% at 92% 6%, var(--color-home-glow-1), transparent 56%),
+    radial-gradient(ellipse 60% 42% at 6% 88%, var(--color-home-glow-2), transparent 52%),
+    linear-gradient(180deg, var(--color-home-wash) 0%, var(--color-home-mid) 38%, var(--color-home-end) 100%);
+}
+
+.home :global(footer) {
+  margin-top: var(--space-8);
+  background: transparent;
+}

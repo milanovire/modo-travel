@@ -1,0 +1,16 @@
+@use "./tokens.scss";
+@use "./reset.scss";
+
+#root {
+  isolation: isolate;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cta);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-primary-muted);
+  color: var(--color-ink);
+}
