@@ -57,6 +57,7 @@ src/
 * React Router
 * Vite
 * Sass
+* Supabase
 * Leaflet
 * Feature-Sliced Design (FSD)
 * Netlify
