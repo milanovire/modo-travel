@@ -2,6 +2,7 @@ export const routes = {
   home: '/',
   matcher: '/podbor',
   results: '/rekomendacii',
+  searchPanel: '/search-panel',
   compare: '/sravnenie',
   destination: (id: string) => `/napravlenie/${id}`,
   itinerary: (id: string) => `/marshrut/${id}`,

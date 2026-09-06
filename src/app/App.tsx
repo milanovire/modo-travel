@@ -10,6 +10,7 @@ import { RecommendationsPage } from '@/pages/recommendations'
 import { ComparePage } from '@/pages/compare'
 import { JourneyPage } from '@/pages/journey'
 import { ReadyPage } from '@/pages/ready'
+import { SearchPanelPage } from '@/pages/search-panel'
 import { routes } from '@/shared/config/routes'
 
 function ScrollToTop() {
@@ -28,6 +29,7 @@ export function App() {
       <ThemeProvider>
         <ScrollToTop />
         <Routes>
+          <Route path={routes.searchPanel} element={<SearchPanelPage />} />
           <Route element={<MainLayout />}>
             <Route path={routes.home} element={<HomePage />} />
             <Route path={routes.matcher} element={<MatcherPage />} />

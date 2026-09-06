@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { recordSearch } from '@/entities/search-analytics'
 import type { FormatId, TripAnswers } from '@/entities/trip-preference'
 import {
   activities,
@@ -10,11 +11,11 @@ import {
   formats,
 } from '@/entities/trip-preference'
 import { routes } from '@/shared/config/routes'
+import { cx } from '@/shared/lib/cx'
+import { useTheme } from '@/shared/lib/theme'
 import { Button } from '@/shared/ui/Button'
 import { Segmented } from '@/shared/ui/Segmented'
-import { cx } from '@/shared/lib/cx'
 import { answersToSearch } from '../model/query'
-import { useTheme } from '@/shared/lib/theme'
 import styles from './QuizFlow.module.scss'
 
 const STEPS = 6
@@ -76,6 +77,7 @@ export function QuizFlow() {
       budget: draft.budget,
       distance: draft.distance,
     }
+    void recordSearch(answers.formats)
     navigate(`${routes.results}?${answersToSearch(answers)}`)
   }
 
