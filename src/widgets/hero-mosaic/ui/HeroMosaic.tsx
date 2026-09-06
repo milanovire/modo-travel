@@ -32,7 +32,7 @@ export function HeroMosaic() {
           <article className={styles.proof}>
             <p className={styles.proofLabel}>Направления</p>
             <p className={styles.proofValue}>10 мест</p>
-            <p>Пуща, полесье, малые города и замки рядом с водой.</p>
+            <p>Пуща, Полесье, малые города и замки рядом с водой.</p>
           </article>
           <article className={styles.place}>
             <img src="/photos/kossovo.jpg" alt="Дворец Пусловских в Коссово" />
