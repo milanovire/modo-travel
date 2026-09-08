@@ -72,4 +72,4 @@ The application provides an interactive environment for observing how users inte
 
 The project is deployed using Netlify.
 
-**Live Demo:** 
+**Live Demo:** https://modo-travel.netlify.app/
